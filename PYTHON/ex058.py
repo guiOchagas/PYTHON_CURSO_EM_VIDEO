@@ -1,15 +1,29 @@
 from random import randint
-computador = randint(0, 10)
-erros = 1
-print('='*40)
-print('{: ^40}'.format( ' JOGO DA ADVINHAÇÃO '))
-print('='*40)
-print('TENTE ADVINHAR QUE NÚMERO O COMPUTADOR ESCOLHEU')
+print('='*30)
+print('{:^30}'.format('JOGO DA ADIVINHAÇÃO'))
+print('='*30)
 print()
-jogador = int(input('Seu palpite: '))
-while jogador != computador:
-    jogador = int(input('Tente novamente: '))
-    if jogador != computador:
-        erros = erros + 1
+print('Pensei em um número de 0 à 5, tenta a sorte.')
 print()
-print('Acertouuu!\n\nO computador escolheu {} e você tentou {} vezes até acertar'.format(computador, erros))
+
+computador = randint(0, 5)
+print(computador)
+print()
+
+acertou = False
+tentativas = 0
+while not acertou:
+    jogador = int(input('Qual o seu palpite? '))
+    print()
+    tentativas += +1
+    if jogador == computador:
+        acertou = True
+    else:
+        if jogador < computador:
+            print('Tenta um número mais alto!')
+        else:
+            print('Tenta um número menor')
+print()
+print('ACERTOU!')
+print()
+print(f'Você tentou {tentativas} tentativas.')
