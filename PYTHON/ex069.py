@@ -2,7 +2,9 @@ homem = mulher = maior = menor = cont = 0
 
 while True:
     idade = int(input('Digite a idade: '))
-    sexo = str(input('Digite o sexo: ')).upper()
+    sexo = ' '
+    while sexo not in 'FM':
+        sexo = str(input('Digite o sexo: ')).upper()
     
     if idade >= 18: #MAIOR DE IDADE
         maior += 1
@@ -19,7 +21,9 @@ while True:
     cont += 1
 
     print()
-    go = str(input('Deseja continuar? [S/N]: ')).upper()
+    go = ' '
+    while go not in 'SN':
+        go = str(input('Deseja continuar? [S/N]: ')).upper()
     print()
     if go == 'N':
         break
