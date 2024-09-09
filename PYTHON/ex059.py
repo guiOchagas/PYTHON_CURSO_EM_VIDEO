@@ -27,7 +27,7 @@ while select != 5:
     print()
     
     #CONDIÇÕES
-    select = int(input('DIGITE UM NÚMERO: '))
+    select = int(input('DIGITE UMA OPÇÃO: '))
     print()
     if select == 1:
         print(f'A soma entre {n1} + {n2} é = {n1 + n2}')
