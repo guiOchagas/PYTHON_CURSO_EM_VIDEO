@@ -1,8 +1,11 @@
-num = ('Zero', 'Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez')
+num = ('um', 'dois', 'três', 'quatro', 'cinco')
 while True:
-    r = int(input('Digite um número entre 0 e 10: '))
-    if r >= 0 and r <= 10:
+    dig = int(input('Digite um número de [1] à [5], ou [0] para sair. '))
+    if dig >= 1 and dig <= 5:
+        print(f'O número [{dig}] por extenso é {num[dig-1].upper()}')
+        print()
+    elif dig > 5:
+        print('Opção inválida.')
+        print()
+    else:
         break
-    print('Opção inválida. ', end='')
-print()
-print(f'Você digitou o número {num[r]}')
