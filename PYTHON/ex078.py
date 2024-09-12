@@ -1,0 +1,10 @@
+valores = list()
+for cont in range(0, 5):
+    valores.append(int(input('Digite um valor: ')))
+print()
+print(max(valores))
+print(min(valores))
+print(valores.index(max(valores)))
+print(valores.index(min(valores)))
+print()
+print(f'O maior valor digitado foi: [{max(valores)}]\nO menor valor digitado foi: [{min(valores)}]\nO maior valor está na posição: [{valores.index(max(valores))}]\nO menor valor está na posição: [{valores.index(min(valores))}]')
